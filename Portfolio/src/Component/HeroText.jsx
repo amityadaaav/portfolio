@@ -2,37 +2,39 @@ import { motion } from "framer-motion";
 
 const HeroText = () => {
   return (
-    <div className="absolute top-1/3 left-[10%] text-white z-20">
-      {/* Optional: subtle overlay for better readability */}
-      <div className="absolute inset-0 bg-black/30 z-10 rounded-lg"></div>
-
-      <motion.h1
-        className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-2xl"
-        initial={{ opacity: 0, y: 20 }}
+    <div className="flex flex-col items-center gap-8">
+      
+      {/* Text Section */}
+      <motion.div
+        className="flex flex-col items-center text-center"
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <span className="text-yellow-300">Hi, I’m</span>{" "}
-        <span className="text-cyan-400">Amit</span>
-      </motion.h1>
+        <h1 className="text-5xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-red-400 to-pink-300 drop-shadow-lg">
+          Hi, I'm Amit
+        </h1>
+        <p className="mt-4 text-xl md:text-2xl text-white drop-shadow-md">
+          React + MERN Stack Developer | Building interactive & AI web apps
+        </p>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-purple-800 font-bold rounded-full shadow-lg"
+        >
+          Chat with Me 🤖
+        </motion.button>
+      </motion.div>
 
-      <motion.p
-        className="text-xl md:text-2xl mb-6 text-white drop-shadow-lg"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 1 }}
-      >
-        React + MERN Stack Developer
-      </motion.p>
-
-      <motion.button
-        className="px-6 py-3 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 text-black font-semibold rounded-xl shadow-lg hover:scale-105 transform transition-all duration-300"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1 }}
-      >
-        View Projects
-      </motion.button>
+      {/* Profile Image Section */}
+      <motion.img
+        src="/shared image (1).jpg"
+        alt="Amit Yadav"
+        className="w-48 h-48 md:w-54 md:h-54 rounded-full border-4 border-yellow-300 shadow-xl object-cover"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 1 }}
+      />
     </div>
   );
 };

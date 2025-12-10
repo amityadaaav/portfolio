@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ThreeScene from "../Component/ThreeScene";
 import ChatWindow from "../Component/Chatbot/ChatWindow";
 import { getBotReply } from "../Component/Chatbot/botLogic";
+import FloatingObjects from "../Component/FloatingObjects";
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
@@ -32,13 +33,50 @@ const Projects = () => {
       repo: "https://github.com/amit-chatbot",
       live: "https://amit-chatbot.com",
     },
+    {
+      name: "Portfolio Website",
+      description: "My personal portfolio built with React + Three.js",
+      repo: "https://github.com/amit-portfolio",
+      live: "https://amit-portfolio.com",
+    },
+    {
+      name: "E-commerce App",
+      description: "MERN stack e-commerce web application",
+      repo: "https://github.com/amit-ecommerce",
+      live: "https://amit-ecommerce.com",
+    },
+    {
+      name: "AI Chatbot",
+      description: "Interactive AI chatbot with React + Node.js",
+      repo: "https://github.com/amit-chatbot",
+      live: "https://amit-chatbot.com",
+    },
+    {
+      name: "Portfolio Website",
+      description: "My personal portfolio built with React + Three.js",
+      repo: "https://github.com/amit-portfolio",
+      live: "https://amit-portfolio.com",
+    },
+    {
+      name: "E-commerce App",
+      description: "MERN stack e-commerce web application",
+      repo: "https://github.com/amit-ecommerce",
+      live: "https://amit-ecommerce.com",
+    },
+    {
+      name: "AI Chatbot",
+      description: "Interactive AI chatbot with React + Node.js",
+      repo: "https://github.com/amit-chatbot",
+      live: "https://amit-chatbot.com",
+    },
   ];
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-purple-700 via-pink-600 to-indigo-700">
+<div className="relative w-full h-screen overflow-auto bg-gradient-to-br from-purple-700 via-pink-600 to-indigo-700">
       
       {/* 3D Background */}
-      <ThreeScene onBotClick={() => setOpen(true)} />
+      {/* <ThreeScene onBotClick={() => setOpen(true)} /> */}
+       {/* <FloatingObjects /> */}
 
       {/* Page Title */}
       <div className="absolute top-16 left-1/2 transform -translate-x-1/2 text-white text-5xl font-bold drop-shadow-lg">

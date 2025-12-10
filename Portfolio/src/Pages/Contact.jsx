@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ThreeScene from "../component/ThreeScene";
-import ChatWindow from "../component/Chatbot/ChatWindow";
-import { getBotReply } from "../component/Chatbot/botLogic";
+import ThreeScene from "../Component/ThreeScene";
+import ChatWindow from "../Component/Chatbot/ChatWindow";
+import { getBotReply } from "../Component/Chatbot/botLogic";
 
 const Contact = () => {
   const [open, setOpen] = useState(false);
@@ -24,11 +24,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative w-full h-screen bg-gradient-to-br from-purple-600 via-pink-500 to-indigo-600 overflow-hidden">
-      {/* Optional: <ThreeScene onBotClick={() => setOpen(true)} /> */}
+    <div className="relative w-full h-screen bg-gradient-to-br from-purple-600 via-pink-500 to-indigo-600 flex flex-col md:flex-row overflow-hidden">
 
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-white px-6">
-        <h1 className="text-6xl md:text-7xl font-extrabold mb-6 text-yellow-300 drop-shadow-lg animate-pulse">
+      {/* Left: Contact Form */}
+      <div className="flex-1 flex flex-col justify-center items-center px-6 md:px-12 py-10 z-10">
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-yellow-300 drop-shadow-lg animate-pulse">
           Contact Me
         </h1>
 
@@ -76,6 +76,12 @@ const Contact = () => {
         </button>
       </div>
 
+      {/* Right: 3D Canvas */}
+      <div className="flex-1 relative z-0 min-w-0">
+        <ThreeScene onBotClick={() => setOpen(true)} />
+      </div>
+
+      {/* Chat Window */}
       <ChatWindow
         isOpen={open}
         onClose={() => setOpen(false)}

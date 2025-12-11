@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ChatWindow from "../component/Chatbot/ChatWindow";
-import { getBotReply } from "../component/Chatbot/botLogic";
+import ChatWindow from "../Component/Chatbot/ChatWindow";
+import { getBotReply } from "../Component/Chatbot/botLogic";
 
 const About = () => {
   const [open, setOpen] = useState(false);
@@ -84,7 +84,7 @@ const About = () => {
         <ul className="list-disc ml-6 mt-2 text-gray-300">
           <li>Working for HP client on enterprise-level apps.</li>
           <li>Built scalable React + Node projects.</li>
-          <li>Improved UI performance and reusable components.</li>
+          <li>Improved UI performance and reusable Components.</li>
         </ul>
       </div>
 

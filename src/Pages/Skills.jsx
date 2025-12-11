@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ThreeScene from "../component/ThreeScene";
-import ChatWindow from "../component/Chatbot/ChatWindow";
-import { getBotReply } from "../component/Chatbot/botLogic";
+import ThreeScene from "../Component/ThreeScene";
+import ChatWindow from "../Component/Chatbot/ChatWindow";
+import { getBotReply } from "../Component/Chatbot/botLogic";
 
 import { FaReact, FaNodeJs, FaJsSquare, FaGitAlt, FaCode } from "react-icons/fa";
 import { 
